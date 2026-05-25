@@ -1,0 +1,13 @@
+USE ROLE INGESTION_LAB_ADMIN_ROLE;
+
+CREATE STORAGE INTEGRATION IF NOT EXISTS INT_AWS_S3_INGESTION_LAB
+    TYPE = EXTERNAL_STAGE
+    STORAGE_PROVIDER = 'S3'
+    ENABLED = TRUE
+    STORAGE_AWS_ROLE_ARN = 'arn:aws:iam::498976383720:role/snowflake-ingestion-lab-role'
+    STORAGE_ALLOWED_LOCATIONS = (
+        's3://snowflake-ingestion-lab/'
+    )
+    COMMENT = 'Storage integration for AWS S3 ingestion lab external stages';
+
+DESC INTEGRATION INT_AWS_S3_INGESTION_LAB;
