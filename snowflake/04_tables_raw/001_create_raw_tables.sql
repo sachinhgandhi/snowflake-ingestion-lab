@@ -1,4 +1,5 @@
 Use Role INGESTION_LAB_DEVELOPER_ROLE;
+use warehouse INGESTION_LAB_WH;
 Use Database INGESTION_LAB_DB;
 
 create table if not exists raw.customers (

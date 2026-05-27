@@ -1,4 +1,5 @@
 Use Role INGESTION_LAB_DEVELOPER_ROLE;
+use warehouse INGESTION_LAB_WH;
 Use Database INGESTION_LAB_DB;
 
 SET batch_id = (SELECT UUID_STRING());
