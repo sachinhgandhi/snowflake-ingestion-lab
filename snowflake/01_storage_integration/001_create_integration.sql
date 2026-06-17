@@ -11,4 +11,12 @@ CREATE STORAGE INTEGRATION IF NOT EXISTS INT_AWS_S3_INGESTION_LAB
     )
     COMMENT = 'Storage integration for AWS S3 ingestion lab external stages';
 
+Create Notification Integration if not exists INT_Email_Ingestion_Lab
+    Type = email
+    enabled = true
+    allowed_recipients = (
+        'sachin.h.gandhi@gmail.com'
+    );
+
 DESC INTEGRATION INT_AWS_S3_INGESTION_LAB;
+DESC INTEGRATION INT_Email_Ingestion_Lab;

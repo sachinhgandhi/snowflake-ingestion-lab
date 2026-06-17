@@ -10,6 +10,9 @@ CREATE SCHEMA IF NOT EXISTS AUDIT WITH MANAGED ACCESS
 CREATE SCHEMA IF NOT EXISTS INGESTION WITH MANAGED ACCESS
     COMMENT = 'Stores ingestion related all objects';
 
+CREATE SCHEMA IF NOT EXISTS Landing WITH MANAGED ACCESS
+    COMMENT = 'Stores data read from Streams';
+
 CREATE SCHEMA IF NOT EXISTS CURATED WITH MANAGED ACCESS
     COMMENT = 'Stores processed output tables before dbt transformation layer';
 
